@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        background-color: black;
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .sqr{
+        height: 150px;
+        width: 150px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation:  radius 1s 1 linear 1s forwards;
+    }
+    .sqr::after{
+        position: absolute;
+        content: '';
+        height: 160px;
+        width: 160px;
+        background-image: conic-gradient(white 0 var(--angle), transparent var(--angle) 360deg);
+        z-index: -1;
+        animation: angle 1s linear 1 forwards, radius 1s 1 linear 1s forwards, color-a 1s 1 linear forwards 1s;
+    }
+    @keyframes angle {
+        0%{--angle: 0deg;}
+        100%{--angle: 360deg;}
+    }
+    @keyframes radius {
+        0%{border-radius: 0;}
+        100%{border-radius: 50%;}
+    }
+    @keyframes color-a {
+        0%{  background-image: conic-gradient(white 0 var(--angle), transparent var(--angle) 360deg);}
+        100%{background-image: conic-gradient(red 0 var(--angle), transparent var(--angle) 360deg);}
+    }
+    @property --angle{
+        inherits: false;
+        initial-value: 0deg;
+        syntax: '<angle>';
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="sqr"></div>
+    </div>
+</body>
+</html>

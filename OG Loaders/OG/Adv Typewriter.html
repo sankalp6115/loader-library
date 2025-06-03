@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background-color: black;
+    }
+    .whole{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30vh;
+        perspective: 400px;
+    }
+    :root{
+        --dur: 0.5s;
+        --ease: ease-in;
+    }
+    @keyframes box {
+        0%{transform: rotateX(-90deg); opacity: 0;}
+        50%{transform: rotateX(0); opacity: 1;}
+        100%{transform: rotateX(-90deg); opacity: 0;}
+    }
+    .box{
+        transform-origin: bottom;
+        opacity: 0;   
+
+    }
+    .box1{
+        animation: box var(--dur) 1 var(--ease)  0s;
+        height: 200px;
+        width: 65px;
+    }
+    .box2{
+        animation: box var(--dur) 1 var(--ease)  0.5s;
+        height: 200px;
+        width: 65px;
+    }
+    .box3{
+        animation: box var(--dur) 1 var(--ease)  1s;
+        height: 200px;
+        width: 65px;   
+    }
+    .box4{
+        animation: box var(--dur) 1 var(--ease)  1.5s;
+        height: 200px;
+        width: 65px;
+    }
+    .box5{
+        animation: box var(--dur) 1 var(--ease)  2s;
+        height: 200px;
+        width: 65px;
+    }
+    .box6{
+        animation: box var(--dur) 1 var(--ease)  2.5s;
+        height: 200px;
+        width: 65px;
+    }
+    .box7{
+        animation: box var(--dur) 1 var(--ease)  3s;
+        height: 200px;
+        width: 65px;   
+    }
+    .letter{
+        position: absolute;
+        font-size: 100px;
+        font-weight: 900;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        width: 65px;
+        color: rgb(255, 208, 0);
+        text-shadow: 0 0 2px white;
+    }
+    .wand{
+        height: 110px;
+        width: 5px;
+        background-color: white;
+        margin-top: 90px;
+        margin-left: 31px;
+    }
+    .let{
+        font-size: 100px;
+        font-weight: 900;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        width: 0;
+        color: white;
+        filter: blur(2px);
+        z-index: -1;
+        opacity: 0;
+    }
+    @keyframes let {
+        0%{opacity: 0;}
+        90%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+    .let1{transform: translateX(-58px) translateY(-43px); animation: let 0.5s 1 forwards;}
+    .let2{transform: translateX(-64px) translateY(-43px); animation: let 0.5s 1 forwards calc(var(--dur)*1);}
+    .let3{transform: translateX(-63px) translateY(-43px); animation: let 0.5s 1 forwards calc(var(--dur)*2);}
+    .let4{transform: translateX(-55px) translateY(-43px); animation: let 0.5s 1 forwards calc(var(--dur)*3);}
+    .let5{transform: translateX(-47px) translateY(-43px); animation: let 0.5s 1 forwards calc(var(--dur)*4);}
+    .let6{transform: translateX(-65px) translateY(-43px); animation: let 0.5s 1 forwards calc(var(--dur)*5);}
+    .let7{transform: translateX(-65px) translateY(-43px); animation: let 0.5s 1 forwards calc(var(--dur)*6);}
+</style>
+</head>
+<body>
+    <div class="whole">
+        <div class="box1 box"><div class="letter">L</div><div class="wand wand1"></div></div><div class="let1 let">L</div>
+        <div class="box2 box"><div class="letter">O</div><div class="wand wand2"></div></div><div class="let2 let">O</div>
+        <div class="box3 box"><div class="letter">A</div><div class="wand wand3"></div></div><div class="let3 let">A</div>
+        <div class="box4 box"><div class="letter">D</div><div class="wand wand4"></div></div><div class="let4 let">D</div>
+        <div class="box5 box"><div class="letter">I</div><div class="wand wand5"></div></div><div class="let5 let">I</div>
+        <div class="box6 box"><div class="letter">N</div><div class="wand wand6"></div></div><div class="let6 let">N</div>
+        <div class="box7 box"><div class="letter">G</div><div class="wand wand7"></div></div><div class="let7 let">G</div>
+    </div>
+</body>
+</html>

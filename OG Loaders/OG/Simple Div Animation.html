@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Animation</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .box{
+            position: fixed;
+            inset: 0px;
+            width: 20rem;
+            height: 20rem;
+            max-width: 100vw;
+            max-height: 100dvh;
+            margin: auto;
+        }
+        .sqr{
+            margin: auto;
+            position: absolute;
+            border-width: 5px;
+            border-style: solid;
+            filter: blur(5px);
+        }
+        .sqr1{
+            border-color: silver;
+        }
+        .sqr2{
+            border-color: cyan;
+        }
+        .sqr3{
+            border-color: red;
+        }
+        .sqr4{
+            border-color: gold;
+        }
+        .sqr5{
+            border-color: magenta;
+        }
+        .sqr6{
+            border-color: pink;
+        }
+        .sqr7{
+            border-color: orange;
+        }
+        .sqr8{
+            border-color: yellow;
+        }
+        .sqr9{
+            border-color: purple;
+        }
+        .sqr10{
+            border-color: white;
+        }
+
+:root {
+    --a:0.2s;
+}
+
+.sqr1 {height:30px; width:30px;     animation: sqr1 3s ease-out infinite forwards calc(0.25*var(--a)*1);}
+.sqr2 {height:60px; width:60px;     animation: sqr2 3s ease-out infinite forwards calc(0.25*var(--a)*2);}
+.sqr3 {height:90px; width:90px;     animation: sqr3 3s ease-out infinite forwards calc(0.25*var(--a)*3);}
+.sqr4 {height:120px; width:120px;   animation: sqr4 3s ease-out infinite forwards calc(0.25*var(--a)*4);}
+.sqr5 {height:150px; width:150px;   animation: sqr5 3s ease-out infinite forwards calc(0.25*var(--a)*5);}
+.sqr6 {height:180px; width:180px;   animation: sqr6 3s ease-out infinite forwards calc(0.25*var(--a)*6);}
+.sqr7 {height:210px; width:210px;   animation: sqr7 3s ease-out infinite forwards calc(0.25*var(--a)*7);}
+.sqr8 {height:240px; width:240px;   animation: sqr8 3s ease-out infinite forwards calc(0.25*var(--a)*8);}
+.sqr9 {height:270px; width:270px;   animation: sqr9 3s ease-out infinite forwards calc(0.25*var(--a)*9);}
+.sqr10 {height:300px; width:300px; animation: sqr10 3s ease-out infinite forwards calc(0.25*var(--a)*10);}
+     
+
+
+@keyframes sqr1{
+0%{transform: translateX(0px) translateY(0px);}
+25%{transform: translateX(0px) translateY(270px);}
+50%{transform: translateX(270px) translateY(270px);}
+75%{transform: translateX(270px) translateY(0px);}
+100%{transform: translateX(0px) translateY(0px);}
+}
+
+@keyframes sqr2{
+0%{transform: translateX(0px) translateY(0px);}
+25%{transform: translateX(0px) translateY(240px);}
+50%{transform: translateX(240px) translateY(240px);}
+75%{transform: translateX(240px) translateY(0px);}
+100%{transform: translateX(0px) translateY(0px);}
+}
+
+@keyframes sqr3{
+0%{transform: translateX(0px) translateY(0px);}
+25%{transform: translateX(0px) translateY(210px);}
+50%{transform: translateX(210px) translateY(210px);}
+75%{transform: translateX(210px) translateY(0px);}
+100%{transform: translateX(0px) translateY(0px);}
+}
+
+@keyframes sqr4{
+0%{transform: translateX(0px) translateY(0px);}
+25%{transform: translateX(0px) translateY(180px);}
+50%{transform: translateX(180px) translateY(180px);}
+75%{transform: translateX(180px) translateY(0px);}
+100%{transform: translateX(0px) translateY(0px);}
+}
+
+@keyframes sqr5{
+0%{transform: translateX(0px) translateY(0px);}
+25%{transform: translateX(0px) translateY(150px);}
+50%{transform: translateX(150px) translateY(150px);}
+75%{transform: translateX(150px) translateY(0px);}
+100%{transform: translateX(0px) translateY(0px);}
+}
+
+@keyframes sqr6{
+0%{transform: translateX(0px) translateY(0px);}
+25%{transform: translateX(0px) translateY(120px);}
+50%{transform: translateX(120px) translateY(120px);}
+75%{transform: translateX(120px) translateY(0px);}
+100%{transform: translateX(0px) translateY(0px);}
+}
+
+@keyframes sqr7{
+0%{transform: translateX(0px) translateY(0px);}
+25%{transform: translateX(0px) translateY(90px);}
+50%{transform: translateX(90px) translateY(90px);}
+75%{transform: translateX(90px) translateY(0px);}
+100%{transform: translateX(0px) translateY(0px);}
+}
+
+@keyframes sqr8{
+0%{transform: translateX(0px) translateY(0px);}
+25%{transform: translateX(0px) translateY(60px);}
+50%{transform: translateX(60px) translateY(60px);}
+75%{transform: translateX(60px) translateY(0px);}
+100%{transform: translateX(0px) translateY(0px);}
+}
+
+@keyframes sqr9{
+0%{transform: translateX(0px) translateY(0px);}
+25%{transform: translateX(0px) translateY(30px);}
+50%{transform: translateX(30px) translateY(30px);}
+75%{transform: translateX(30px) translateY(0px);}
+100%{transform: translateX(0px) translateY(0px);}
+}
+
+@keyframes sqr10{
+0%{transform: translateX(0px) translateY(0px);}
+25%{transform: translateX(0px) translateY(0px);}
+50%{transform: translateX(0px) translateY(0px);}
+75%{transform: translateX(0px) translateY(0px);}
+100%{transform: translateX(0px) translateY(0px);}
+}
+
+</style>
+</head>
+<body>
+    <div class="box">
+        <div class="sqr sqr1"></div>
+        <div class="sqr sqr2"></div>
+        <div class="sqr sqr3"></div>
+        <div class="sqr sqr4"></div>
+        <div class="sqr sqr5"></div>
+        <div class="sqr sqr6"></div>
+        <div class="sqr sqr7"></div>
+        <div class="sqr sqr8"></div>
+        <div class="sqr sqr9"></div>
+        <div class="sqr sqr10"></div>
+    </div>
+</body>
+</html>

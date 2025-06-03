@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width='
+    ', initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        margin: 0;
+    }
+    .box{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .triangle {
+	width: 0;
+	height: 0;
+	border-right: 50px solid  transparent; 
+	border-left: 50px solid  transparent; 
+	border-bottom: 88px solid;
+    position: absolute;
+    transform-origin: top;
+    opacity: 0.7;
+    mix-blend-mode: lighten;
+    }
+    .tri1{
+        animation: tri1 3s linear infinite ;
+        border-bottom-color: violet;
+    }
+    @keyframes tri1 {
+        0%{transform: rotate(0deg);}
+        85%{transform: rotate(60deg);}
+        100%{transform: rotate(60deg);}
+    }
+
+    .tri2{
+        animation: tri2 3s linear infinite ;
+        border-bottom-color: indigo;
+    }
+    @keyframes tri2 {
+        0%{transform: rotate(0deg);}
+        85%{transform: rotate(120deg);}
+        100%{transform: rotate(120deg);}
+    }
+
+    .tri3{
+        animation: tri3 3s linear infinite ;
+        border-bottom-color: blue;
+    }
+    @keyframes tri3 {
+        0%{transform: rotate(0deg);}
+        85%{transform: rotate(180deg);}
+        100%{transform: rotate(180deg);}
+    }
+
+    .tri4{
+        animation: tri4 3s linear infinite ;
+        border-bottom-color: green;
+    }
+    @keyframes tri4 {
+        0%{transform: rotate(0deg);}
+        85%{transform: rotate(240deg);}
+        100%{transform: rotate(240deg);}
+    }
+
+    .tri5{
+        animation: tri5 3s linear infinite ;
+        border-bottom-color: yellow;
+    }
+    @keyframes tri5 {
+        0%{transform: rotate(0deg);}
+        85%{transform: rotate(300deg);}
+        100%{transform: rotate(300deg);}
+    }
+
+    .tri6{
+        animation: tri6 3s linear infinite ;
+        border-bottom-color: rgb(255, 87, 87);
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="tri1 triangle"></div>
+        <div class="tri2 triangle"></div>
+        <div class="tri3 triangle"></div>
+        <div class="tri4 triangle"></div>
+        <div class="tri5 triangle"></div>
+        <div class="tri6 triangle"></div>
+    </div>
+</body>
+</html>

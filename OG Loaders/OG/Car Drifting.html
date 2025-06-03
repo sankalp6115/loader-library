@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        margin: 0;
+        transform: scale(0.7);
+        margin-top: 20%;
+    }
+    .box{
+        position: fixed;
+        inset: 0;
+        width: fit-content;
+        height: fit-content;
+        margin: auto;
+    }
+    .disc1{
+        position: fixed;
+        inset: 0;
+        width: fit-content;
+        height: fit-content;
+        margin: auto;
+        height: 500px;
+        width: 500px;
+        background: url(https://static.vecteezy.com/system/resources/thumbnails/027/712/159/small_2x/road-with-markings-illustration-options-road-circle-ring-vector.jpg);
+        background-position: center 0%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border: 2px solid white;
+        border-radius: 50%;
+    }
+    img{
+        background-color: transparent;
+        height: 50px;
+        width: 100px;
+        transform-origin: center 40px;
+        background-color: rgba(44, 44, 44, 0.2);
+        backdrop-filter: blur(2px);
+        border-radius: 20px;
+        animation: car 5s linear infinite forwards;
+        padding: 0px;
+        object-fit: cover;
+    }
+    @keyframes car {
+        0%{transform: rotateZ(0) translatex(-190px);}
+        100%{transform: rotateZ(360deg) translatex(-190px);}
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="disc1"></div>
+        <div class="img">
+            <img src="https://freepngimg.com/save/135300-blue-top-ferrari-view-hq-image-free/918x454">
+            <div class="smoke"></div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
