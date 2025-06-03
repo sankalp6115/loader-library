@@ -383,7 +383,7 @@ section.loaders{
     background-color: black;
 }
 
-/* a:nth-of-type(n+60){display: none;} */
+a:nth-of-type(n+68){display: none;}
 
 
 /*Number of loader*/
@@ -396,6 +396,7 @@ section.loaders{
     width: 20px;
     opacity: 0;
     transition: 0.1s;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .loader:hover::before{
     opacity: 1;
@@ -573,15 +574,18 @@ section.loaders{
     width: 100px;
     border-radius: 50%;
     border: 5px solid white;
+    background-color: transparent;
     box-shadow: 0 0 10px white inset;
-    animation: circle6 1s infinite linear; 
+    animation: circle6 2s infinite linear; 
 }
 .loader6 .circle2{
     height: 30px;
     width: 30px;
     border-radius: 50%;
-    background-color: blue;
+    /* background-color: blue; */
+    background-image: conic-gradient(black, darkgrey, black, darkgrey, black);
     translate: 11px 11px;
+    animation: circle6 0.8s infinite linear reverse; 
 }
 @keyframes circle6{
     0%{transform: rotate(0deg);}
@@ -2332,10 +2336,10 @@ margin-left: -30px;
     height: 150px;
     margin-top: -70px;
     margin-left: 8px;
-    border: 2px dashed greenyellow;
+    border: 1px dashed white;
     opacity: 0.6;
 }
-.loader58 .ball{
+.loader58 .ball-58{
     position: absolute;
     height: 15px;
     width: 15px;
@@ -2343,6 +2347,7 @@ margin-left: -30px;
     border: 2px solid;
     background-color: gold;
     z-index: 100;
+    --easing: cubic-bezier(0.83, 0, 0.17, 1);
 }
 .loader58 .line1-58{transform: rotate(0);}
 .loader58 .line2-58{transform: rotate(22.5deg);}
@@ -2358,18 +2363,19 @@ syntax: '<percentage>';
 inherits: false;
 initial-value: 500%;
 }
-.loader58 .ball1-58{transform:translateX(calc(sin(0deg)*var(--rad)))         translateY(calc(cos(0deg)*var(--rad)));      animation: ball 1s infinite ease alternate 0s;}
-.loader58 .ball2-58{transform:translateX(calc(sin(22.5deg)*var(--rad)))      translateY(calc(cos(22.5deg)*var(--rad)));   animation: ball 1s infinite ease alternate 0.075s;}
-.loader58 .ball3-58{transform:translateX(calc(sin(45deg)*var(--rad)))        translateY(calc(cos(45deg)*var(--rad)));     animation: ball 1s infinite ease alternate 0.15s;}
-.loader58 .ball4-58{transform:translateX(calc(sin(67.5deg)*var(--rad)))      translateY(calc(cos(67.5deg)*var(--rad)));   animation: ball 1s infinite ease alternate 0.225s;}
-.loader58 .ball5-58{transform:translateX(calc(sin(90deg)*var(--rad)))        translateY(calc(cos(90deg)*var(--rad)));     animation: ball 1s infinite ease alternate 0.30s;}
-.loader58 .ball6-58{transform:translateX(calc(sin(110.5deg)*var(--rad)))     translateY(calc(cos(110.5deg)*var(--rad)));  animation: ball 1s infinite ease alternate 0.375s;}
-.loader58 .ball7-58{transform:translateX(calc(sin(135deg)*var(--rad)))       translateY(calc(cos(135deg)*var(--rad)));    animation: ball 1s infinite ease alternate 0.45s;}
-.loader58 .ball8-58{transform:translateX(calc(sin(157.5deg)*var(--rad)))     translateY(calc(cos(157.5deg)*var(--rad)));  animation: ball 1s infinite ease alternate 0.525s;}
+.loader58 .ball1-58{transform:translateX(calc(sin(0deg)*var(--rad)))         translateY(calc(cos(0deg)*var(--rad)));      animation: ball-58 1s infinite var(--easing) alternate 0s;}
+.loader58 .ball2-58{transform:translateX(calc(sin(22.5deg)*var(--rad)))      translateY(calc(cos(22.5deg)*var(--rad)));   animation: ball-58 1s infinite var(--easing) alternate 0.075s;}
+.loader58 .ball3-58{transform:translateX(calc(sin(45deg)*var(--rad)))        translateY(calc(cos(45deg)*var(--rad)));     animation: ball-58 1s infinite var(--easing) alternate 0.15s;}
+.loader58 .ball4-58{transform:translateX(calc(sin(67.5deg)*var(--rad)))      translateY(calc(cos(67.5deg)*var(--rad)));   animation: ball-58 1s infinite var(--easing) alternate 0.225s;}
+.loader58 .ball5-58{transform:translateX(calc(sin(90deg)*var(--rad)))        translateY(calc(cos(90deg)*var(--rad)));     animation: ball-58 1s infinite var(--easing) alternate 0.30s;}
+.loader58 .ball6-58{transform:translateX(calc(sin(110.5deg)*var(--rad)))     translateY(calc(cos(110.5deg)*var(--rad)));  animation: ball-58 1s infinite var(--easing) alternate 0.375s;}
+.loader58 .ball7-58{transform:translateX(calc(sin(135deg)*var(--rad)))       translateY(calc(cos(135deg)*var(--rad)));    animation: ball-58 1s infinite var(--easing) alternate 0.45s;}
+.loader58 .ball8-58{transform:translateX(calc(sin(157.5deg)*var(--rad)))     translateY(calc(cos(157.5deg)*var(--rad)));  animation: ball-58 1s infinite var(--easing) alternate 0.525s;}
 
-@keyframes ball{
-0%{--rad: -400%;}
-100%{--rad: 400%;}
+@keyframes ball-58{
+0%{--rad: -400%; scale: 1;}
+50%{scale: 0.8;}
+100%{--rad: 400%; scale: 1;}
 }
 /*---------------------------------------------------------------------------------------------------------------------------------------------LOADER59*/
 .loader59::before{content: '59';}
@@ -2494,7 +2500,7 @@ initial-value: 500%;
         flex-direction: row;
     }
     .loader62 .letter{
-        animation: letter-62 1s ease-in-out infinite alternate;
+        animation: letter-62 1s ease-in-out infinite alternate-reverse;
         animation-delay: calc(-1*var(--i)*0.15s);
     }
     @keyframes letter-62 {
@@ -2924,3 +2930,8 @@ span.copyright-brand-name{
     text-align: center;
 }
 
+h1.more{
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+
+}

@@ -10,7 +10,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, {
   root: null, // viewport
-  threshold: 1 // adjust as needed
+  threshold: 0.7 // adjust as needed
 });
 
 // Observe all .loader elements
